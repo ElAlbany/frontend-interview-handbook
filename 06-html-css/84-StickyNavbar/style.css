@@ -1,0 +1,15 @@
+body { margin: 0; font-family: sans-serif; }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: white;
+  padding: 16px 24px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gotchas to say out loud:
+   - sticky breaks if ANY ancestor has overflow: hidden
+   - it sticks within its parent's bounds, not the whole page */

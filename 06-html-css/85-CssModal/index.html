@@ -1,0 +1,20 @@
+<!-- Problem 85 — Pure-CSS modal overlay. Open in a browser, click the label. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- checkbox hack: clicking the label toggles the modal without JS -->
+  <label for="modal-toggle" class="open-btn">Open modal</label>
+  <input type="checkbox" id="modal-toggle" hidden />
+
+  <div class="backdrop">
+    <div class="dialog">
+      <h2>Pure CSS modal</h2>
+      <p>No JavaScript — the hidden checkbox does the toggling.</p>
+      <label for="modal-toggle" class="close-btn">Close</label>
+    </div>
+  </div>
+</body>
+</html>

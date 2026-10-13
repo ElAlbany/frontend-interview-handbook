@@ -1,0 +1,24 @@
+body { font-family: sans-serif; padding: 24px; }
+.open-btn, .close-btn {
+  background: #3b82f6; color: white; padding: 8px 16px;
+  border-radius: 8px; cursor: pointer;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;                       /* top/right/bottom/left: 0 */
+  background: rgb(0 0 0 / 0.5);
+  display: none;                  /* hidden until the checkbox is checked */
+  place-items: center;
+  z-index: 100;
+}
+#modal-toggle:checked ~ .backdrop { display: grid; }
+
+.dialog {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow: auto;                 /* scrolls internally when too tall */
+}

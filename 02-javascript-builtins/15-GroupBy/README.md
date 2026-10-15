@@ -53,7 +53,10 @@ console.log(groupBy([1, 2, 3, 4], (n) => (n % 2 ? "odd" : "even")));
  */
 function groupBy<T, K extends keyof T>(arr: T[], key: K): Record<string, T[]>;
 function groupBy<T>(arr: T[], key: (item: T) => string): Record<string, T[]>;
-function groupBy<T>(arr: T[], key: keyof T | ((item: T) => string)): Record<string, T[]> {
+function groupBy<T>(
+  arr: T[],
+  key: keyof T | ((item: T) => string),
+): Record<string, T[]> {
   return arr.reduce<Record<string, T[]>>((acc, item) => {
     const k = typeof key === "function" ? key(item) : String(item[key]);
     (acc[k] ??= []).push(item);

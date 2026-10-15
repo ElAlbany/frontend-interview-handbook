@@ -5,7 +5,7 @@
 function sum(a) {
   return function (b) {
     if (b === undefined) return a;
-    return sum(a + b);
+    return sum(a + b);  
   };
 }
 
@@ -17,8 +17,8 @@ const curry = (fn) =>
   };
 
 console.log(sum(1)(2)(3)()); // 6
-console.log(sum(1)());       // 1
+console.log(sum(1)()); // 1
 
 const add3 = curry((a, b, c) => a + b + c);
-console.log(add3(1)(2)(3));   // 6
-console.log(add3(1, 2)(3));   // 6 (partial application also works)
+console.log(add3(1)(2)(3)); // 6
+console.log(add3(1, 2)(3)); // 6 (partial application also works)
